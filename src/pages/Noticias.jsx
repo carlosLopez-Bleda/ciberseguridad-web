@@ -9,7 +9,7 @@ const Noticias = () => {
   useEffect(() => {
     const fetchNoticias = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/noticias"); // O usa la URL de Render si ya está en producción
+        const response = await fetch("https://ciberseguridad-web-1.onrender.com/api/noticias"); // O usa la URL de Render si ya está en producción
         const data = await response.json();
         console.log("Noticias recibidas:", data); // 👈 Verifica en consola
         setNoticias(data); // Aseguramos que guardamos el array de noticias directamente
