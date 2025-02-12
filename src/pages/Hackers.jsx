@@ -1,3 +1,4 @@
+import React from "react";
 import "../styles/Hackers.css";
 import "../styles/Animations.css";
 

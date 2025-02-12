@@ -1,3 +1,4 @@
+import React from "react";
 import TypingEffect from "../components/TypingEffect";
 
 const Home = () => {
