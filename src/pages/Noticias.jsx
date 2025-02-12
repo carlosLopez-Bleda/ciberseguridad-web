@@ -10,8 +10,14 @@ const Noticias = () => {
       try {
         const apiKey = import.meta.env.VITE_NEWS_API_KEY;
         const response = await fetch(
-          `https://newsapi.org/v2/everything?q=cybersecurity&apiKey=${apiKey}`
+          `https://newsapi.org/v2/everything?q=cybersecurity&apiKey=${apiKey}`,
+          {
+            headers: {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+            }
+          }
         );
+        
         const data = await response.json();
         setNoticias(data.articles.slice(0, 5)); // Solo mostramos 5 noticias
       } catch (error) {
