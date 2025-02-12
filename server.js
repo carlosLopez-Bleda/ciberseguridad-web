@@ -27,7 +27,10 @@ app.get("/api/noticias", async (req, res) => {
       res.status(500).json({ error: error.message });
     }
   });
-      
+
+app.get("/", (req, res) => {
+  res.send("Servidor funcionando correctamente 🚀");
+});
 
 // Iniciar servidor
 app.listen(PORT, () => {
