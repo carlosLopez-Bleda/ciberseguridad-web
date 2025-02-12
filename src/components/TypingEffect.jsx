@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect } from "react";
 
 const TypingEffect = ({ text, speed = 100 }) => {
